@@ -8,6 +8,12 @@ namespace DistribuaAlimento.Models
     public class Instituicao
     {
 
+
+        public Instituicao()
+        {
+            this.eventos = new HashSet<Evento>();
+        }
+
         public int id { get; set; }
 
         public string nome { get; set; }
@@ -20,7 +26,7 @@ namespace DistribuaAlimento.Models
 
         public string email { get; set; }
 
-        public IList<Evento> eventos { get; set; }
+        public ICollection<Evento> eventos { get; set; }
 
     }
 }

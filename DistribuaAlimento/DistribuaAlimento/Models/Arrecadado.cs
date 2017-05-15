@@ -9,10 +9,16 @@ namespace DistribuaAlimento.Models
     {
 
 
+
+        public Arrecadado()
+        {
+            this.eventos = new HashSet<Evento>();
+        }
+
         public int id { get; set; }
 
         public int idEvento { get; set; }
-        public virtual IList<Evento> eventos { get; set; }
+        public virtual ICollection<Evento> eventos { get; set; }
 
 
 

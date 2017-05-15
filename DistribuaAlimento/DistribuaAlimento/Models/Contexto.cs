@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DistribuaAlimento.Models.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -21,10 +22,8 @@ namespace DistribuaAlimento.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add();
-            modelBuilder.Configurations.Add();
-            modelBuilder.Configurations.Add();
-            modelBuilder.Configurations.Add();
+            modelBuilder.Configurations.Add(new AlimentoMap());
+            
 
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;

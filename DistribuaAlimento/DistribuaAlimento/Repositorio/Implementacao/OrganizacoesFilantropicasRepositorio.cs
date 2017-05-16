@@ -71,7 +71,7 @@ namespace DistribuaAlimento.Repositorio.Implementacao
 
         public IQueryable<OrganizacoesFilantropicas> GetQueryable()
         {
-            return _UntWork.contexto.Alimento;
+            return _UntWork.contexto.OrganizacoesFilantropicas;
         }
 
         public IEnumerable<OrganizacoesFilantropicas> ListarMuitos(Func<OrganizacoesFilantropicas, bool> where)

@@ -9,8 +9,7 @@ namespace DistribuaAlimento.Models
 {
     public partial class Contexto : DbContext
     {
-        public Contexto() : base("name=Contexto")
-        { }
+        public Contexto() : base("name=Contexto"){ }
 
         public virtual DbSet<Alimento> Alimento { get; set; }
         public virtual DbSet<Evento> Evento { get; set; }

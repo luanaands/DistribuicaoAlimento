@@ -13,7 +13,7 @@ namespace DistribuaAlimento.Models
             this.organizacoes = new HashSet<OrganizacoesFilantropicas>();
             this.arrecadados = new HashSet<Arrecadado>();
         }
-        
+
 
 
         public int id { get; set; }

@@ -31,7 +31,9 @@ namespace DistribuaAlimento.Models.Mapping
             this.Property(t => t.validade).HasColumnName("validade");
             this.Property(t => t.tipo).HasColumnName("tipo");
 
-
+            this.HasRequired<Estoque>(s => s.estoque)
+                   .WithMany(s => s.alimentos)
+                   .HasForeignKey(s => s.id);
 
         }
     }

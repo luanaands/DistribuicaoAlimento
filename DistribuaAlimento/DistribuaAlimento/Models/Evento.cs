@@ -7,6 +7,9 @@ namespace DistribuaAlimento.Models
 {
     public class Evento
     {
+
+        public Evento() { }
+
         public int id { get; set; }
 
         public string nome { get; set; }
@@ -19,5 +22,6 @@ namespace DistribuaAlimento.Models
 
         public virtual Instituicao instituicao { get; set; }
 
+        public virtual Arrecadado arrecadado { get; set; }
     }
 }

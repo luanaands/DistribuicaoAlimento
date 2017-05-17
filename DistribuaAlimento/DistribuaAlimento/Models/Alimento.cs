@@ -12,7 +12,9 @@ namespace DistribuaAlimento.Models
 
         public string nome { get; set; }
 
-        public string validade { get; set; }
+        public string gramas { get; set; }
+
+        public DateTime validade { get; set; }
 
         public string tipo { get; set; }
 

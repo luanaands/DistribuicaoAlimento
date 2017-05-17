@@ -12,9 +12,13 @@ namespace DistribuaAlimento.Models
 
         public int id { get; set; }
 
+        public DateTime inicio { get;  set; }
+
+        public DateTime fim { get; set; }
+
         public string nome { get; set; }
 
-        public string numeroEstimadoPessoas { get; set; }
+        public string publico { get; set; }
 
         public int idEstoque { get; set; }
 

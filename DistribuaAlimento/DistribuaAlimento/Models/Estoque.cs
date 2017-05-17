@@ -14,7 +14,7 @@ namespace DistribuaAlimento.Models
             this.alimentos = new HashSet<Alimento>();
         }
 
-        [Key, ForeignKey("Evento")]
+        
         public int id { get; set; }
 
         public int idAlimento { get; set; }

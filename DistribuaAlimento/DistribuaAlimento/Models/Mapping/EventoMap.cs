@@ -17,19 +17,19 @@ namespace DistribuaAlimento.Models.Mapping
             this.ToTable("Evento");
             this.Property(t => t.id).HasColumnName("id");
             this.Property(t => t.nome).HasColumnName("nome");
-            this.Property(t => t.numeroEstimadoPessoas).HasColumnName("numeroEstimadoPessoas");
-            this.Property(t => t.idEstoque).HasColumnName("idEstoque");
+            this.Property(t => t.publico).HasColumnName("publico");
+            
 
             this.HasRequired(s => s.estoque)
-                 .WithRequiredPrincipal(ad => ad.evento);
+                .WithRequiredPrincipal(ad => ad.evento);
 
             this.HasRequired<Arrecadado>(s => s.arrecadado)
                    .WithMany(s => s.eventos)
-                   .HasForeignKey(s => s.id);
+                   .HasForeignKey(s => s.idArrecadado);
 
             this.HasRequired<Instituicao>(s => s.instituicao)
                    .WithMany(s => s.eventos)
-                   .HasForeignKey(s => s.id);
+                   .HasForeignKey(s => s.idInstituicao);
 
         }
     }

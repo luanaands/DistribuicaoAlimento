@@ -9,7 +9,7 @@ namespace DistribuaAlimento.Models
     {
         public OrganizacoesFilantropicas() {
 
-          //  this.arrecadados= new HashSet<Arrecadado>();
+            this.doacoes= new HashSet<Doacao>();
         }
 
         public int id { get; set; }
@@ -25,9 +25,8 @@ namespace DistribuaAlimento.Models
         public string contato { get; set; }
 
         public string email { get; set; }
-        public virtual Arrecadado arrecadado { get; set; }
-
-      //  public virtual ICollection<Arrecadado> arrecadados { get; set; }
+        public virtual Doacao doacao { get; set; }
+        public virtual ICollection<Doacao> doacoes { get; set; }
 
     }
 }

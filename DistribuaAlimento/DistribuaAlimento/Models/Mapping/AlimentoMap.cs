@@ -17,8 +17,7 @@ namespace DistribuaAlimento.Models.Mapping
             this.Property(t => t.nome)
                 .HasMaxLength(30);
 
-            this.Property(t => t.validade)
-                .HasMaxLength(30);
+            
 
             this.Property(t => t.tipo)
                 .HasMaxLength(30);
@@ -32,8 +31,9 @@ namespace DistribuaAlimento.Models.Mapping
             this.Property(t => t.tipo).HasColumnName("tipo");
 
             this.HasRequired<Estoque>(s => s.estoque)
-                   .WithMany(s => s.alimentos)
-                   .HasForeignKey(s => s.id);
+                    .WithMany(s => s.alimentos)
+                    .HasForeignKey(s => s.idEstoque);
+
 
         }
     }

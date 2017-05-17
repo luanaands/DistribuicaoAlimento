@@ -26,8 +26,6 @@ namespace DistribuaAlimento.Models
 
         public string email { get; set; }
 
-        public int idEvento { get; set; }
-
         public ICollection<Evento> eventos { get; set; }
 
     }

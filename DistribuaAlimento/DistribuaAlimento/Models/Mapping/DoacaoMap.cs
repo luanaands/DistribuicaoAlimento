@@ -18,9 +18,16 @@ namespace DistribuaAlimento.Models.Mapping
 
 
             // Table & Column Mappings
-            this.ToTable("Alimento");
+            this.ToTable("doacao");
             this.Property(t => t.id).HasColumnName("id");
-      
+
+            
+            this.HasRequired<Arrecadado>(s => s.arrecadado)
+                         .WithMany(s => s.doacoes)
+                         .HasForeignKey(s => s.idArrecadado);
+            this.HasRequired<OrganizacoesFilantropicas>(s => s.organizacao)
+                         .WithMany(s => s.doacoes)
+                         .HasForeignKey(s => s.idOrganizacaoFila);
 
         }
     }

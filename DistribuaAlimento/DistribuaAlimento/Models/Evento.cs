@@ -10,8 +10,13 @@ namespace DistribuaAlimento.Models
 
         public Evento() { }
 
+        //Primary key
         public int id { get; set; }
-
+        //foreign key 
+        //one for one
+        public int idInstituicao { get; set; }
+        public int idArrecadado { get; set; }
+        //
         public DateTime inicio { get;  set; }
 
         public DateTime fim { get; set; }
@@ -19,8 +24,6 @@ namespace DistribuaAlimento.Models
         public string nome { get; set; }
 
         public string publico { get; set; }
-
-        public int idEstoque { get; set; }
 
         public virtual Estoque estoque { get; set; }
 

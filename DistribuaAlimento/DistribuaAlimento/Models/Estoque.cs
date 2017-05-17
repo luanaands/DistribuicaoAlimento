@@ -17,8 +17,6 @@ namespace DistribuaAlimento.Models
         
         public int id { get; set; }
 
-        public int idAlimento { get; set; }
-
         public virtual ICollection<Alimento> alimentos { get; set; }
 
         public virtual Evento evento { get; set; }

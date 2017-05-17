@@ -18,6 +18,8 @@ namespace DistribuaAlimento.Models
 
         public string tipo { get; set; }
 
+        public int idEstoque { get; set; } 
+
         public virtual Estoque estoque { get; set; }
 
     }

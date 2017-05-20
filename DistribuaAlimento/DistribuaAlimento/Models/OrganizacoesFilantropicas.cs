@@ -25,7 +25,7 @@ namespace DistribuaAlimento.Models
         public string contato { get; set; }
 
         public string email { get; set; }
-        public virtual Doacao doacao { get; set; }
+        
         public virtual ICollection<Doacao> doacoes { get; set; }
 
     }

@@ -16,13 +16,14 @@ namespace DistribuaAlimento.Models.Mapping
             // Properties
 
             // Table & Column Mappings
-            this.ToTable("Alimento");
-            this.Property(t => t.id).HasColumnName("id");
-            this.Property(t => t.nome).HasColumnName("nome");
+            this.ToTable("organizacoesfilantropicas");
+            this.Property(t => t.cnpj).HasColumnName("cnpj");
+            this.Property(t => t.contato).HasColumnName("telefone");
+            this.Property(t => t.email).HasColumnName("email");
+            this.Property(t => t.nome).HasColumnName("razaosocial");
+            this.Property(t => t.nomeRepresentante).HasColumnName("nomerepresentante");
+            this.Property(t => t.quantidadePessoas).HasColumnName("quantidadepessoas");
 
-            this.HasRequired<Arrecadado>(s => s.arrecadado)
-                    .WithMany(s => s.organizacaoFilatropicas)
-                    .HasForeignKey(s => s.id);
         }
     }
 }

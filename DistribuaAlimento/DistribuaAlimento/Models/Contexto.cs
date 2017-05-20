@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -22,10 +23,16 @@ namespace DistribuaAlimento.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new AlimentoMap());
-            
+            modelBuilder.Configurations.Add(new ArrecadadoMap());
+            modelBuilder.Configurations.Add(new DoacaoMap());
+            modelBuilder.Configurations.Add(new EstoqueMap());
+            modelBuilder.Configurations.Add(new EventoMap());
+            modelBuilder.Configurations.Add(new InstituicaoMap());
+            modelBuilder.Configurations.Add(new OrganizacoesFilantropicasMap());
 
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
+          //  modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
     }

@@ -14,7 +14,7 @@ namespace DistribuaAlimento.Models.Mapping
             this.HasKey(t => t.id);
 
             // Table & Column Mappings
-            this.ToTable("Evento");
+            this.ToTable("evento");
             this.Property(t => t.id).HasColumnName("id");
             this.Property(t => t.nome).HasColumnName("nome");
             this.Property(t => t.publico).HasColumnName("publico");

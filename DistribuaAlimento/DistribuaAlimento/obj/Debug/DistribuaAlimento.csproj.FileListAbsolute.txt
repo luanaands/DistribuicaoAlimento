@@ -104,3 +104,4 @@ C:\Users\User\Desktop\DistribuicaoAlimento\DistribuicaoAlimento\DistribuaAliment
 C:\Users\User\Desktop\DistribuicaoAlimento\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\EntityFramework6.Npgsql.dll
 C:\Users\User\Desktop\DistribuicaoAlimento\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\Npgsql.dll
 C:\Users\User\Desktop\DistribuicaoAlimento\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\EntityFramework6.Npgsql.xml
+C:\Users\User\Desktop\DistribuicaoAlimento\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\Npgsql.xml

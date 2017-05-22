@@ -30,9 +30,17 @@ namespace PGE.Alvara.Controllers
             menu.listaMenu.Add(new Menu
             {
                 id = 1,
-                titulo = "Instituicao",
-                modulo = "Instituicao",
+                titulo = "Alvará",
+                modulo = "Alvara",
                 acao = "Index"
+            });
+
+            menu.listaMenu.Add(new Menu
+            {
+                id = 2,
+                titulo = "Relatório",
+                modulo = "Alvara",
+                acao = "Relatorio"
             });
 
             StringBuilder navBar = new StringBuilder();

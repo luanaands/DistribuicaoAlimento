@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace DistribuaAlimento.Controllers
 {
@@ -17,8 +18,9 @@ namespace DistribuaAlimento.Controllers
         public ActionResult Index()
         {
 
-
-            return View();
+            IEnumerable<Instituicao> _alvaraIEnumerable = Enumerable.Empty<Instituicao>();
+            _alvaraIEnumerable = _IInstituicaoServico.ListarTudo();
+            return View(_alvaraIEnumerable);
         }
 
         
@@ -53,8 +55,79 @@ namespace DistribuaAlimento.Controllers
                 return View(instituicao);
             }
 
-            return RedirectToAction("Index"/*"Details", new RouteValueDictionary(alvara)*/);
+            return RedirectToAction("Details", new RouteValueDictionary(instituicao));
+         }
+
+        public ActionResult Details(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                Instituicao instituicao = _IInstituicaoServico.ObterPorID(id);
+                return View(instituicao);
+            }
+            else
+            {
+                return HttpNotFound();
+            }
         }
 
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                Instituicao instituicao = _IInstituicaoServico.ObterPorID(id);
+
+                return View(instituicao);
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+        }
+        [HttpPost]
+        public ActionResult Edit(Instituicao instituicao)
+        { 
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    //*** altera alvará.
+
+                    _IInstituicaoServico.Editar(instituicao);
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.msgErro = "Erro na Alteração. " + ex.Message.ToString();
+                    return View(instituicao);
+                }
+            }
+            else
+            {
+                
+                return View(instituicao);
+            }
+
+            return RedirectToAction("Details", new RouteValueDictionary(instituicao));
+        }
+
+        public ActionResult Delete(int id)
+        {
+
+            if (ModelState.IsValid)
+            {
+                //*** Exclui alvara
+                var instituicao = _IInstituicaoServico.ObterPorID(id);
+                _IInstituicaoServico.Deletar(instituicao);
+
+                return RedirectToAction("Index", routeValues: new { id = id});
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+        }
     }
+
 }

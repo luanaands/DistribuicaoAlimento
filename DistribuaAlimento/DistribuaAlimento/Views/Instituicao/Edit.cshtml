@@ -3,16 +3,17 @@
 @{
     ViewBag.Title = "Instituicao";
 }
-<br/>
-<br/>
-<br/>
-
-
+<br />
+<br />
+<br />
 <div class="col-md-10 col-lg-offset-1">
 
-    @using (Html.BeginForm("Create", "Instituicao"))
+    @using (Html.BeginForm("Edit", "Instituicao"))
     {
         @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.id)
+
+        @Html.ValidationSummary(true, null, new { @class = "text-danger" })
 
         <div class="panel panel-success" id="panel" name="panel">
             <div class="panel-heading">
@@ -57,4 +58,4 @@
 
 
     }
-  </div>
+</div>

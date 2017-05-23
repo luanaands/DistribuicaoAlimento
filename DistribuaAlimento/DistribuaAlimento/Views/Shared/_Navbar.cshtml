@@ -4,7 +4,7 @@
 <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
         <a href="@Url.Action("Index", "Home")" class="navbar-brand">
-            <img src='~/Content/Images/pge50logo20.png' alt='pge' />
+            <p>Home</p>
         </a>
     </div>
     <!-- /.navbar-header -->
@@ -16,10 +16,7 @@
     <ul class="nav navbar-nav navbar-right">
 
 
-        <li class="text-success">
-            <a tabindex="200" href="#"><i class="fa fa-user fa-fw"></i>@Session["usuarioNome"]</a>
-
-        </li>
+      
 
         <li class="text-success">
             <a tabindex="200" href="@Url.Content("~")LogIn/LogOut"><i class="fa fa-sign-out fa-fw"></i>Sair</a>

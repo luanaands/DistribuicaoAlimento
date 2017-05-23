@@ -1,5 +1,10 @@
-﻿using System;
+﻿using Castle.Windsor;
+using Castle.Windsor.Installer;
+using DistribuaAlimento.Models;
+using DistribuaAlimento.plumbing;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,12 +15,27 @@ namespace DistribuaAlimento
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        private static IWindsorContainer container;
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer(new CreateDatabaseIfNotExists<Contexto>());
+            BootstrapContainer();
+        }
+
+        private static void BootstrapContainer()
+        {
+            container = new WindsorContainer()
+                .Install(FromAssembly.This());
+
+            var controllerFactory = new WindsorControllerFactory(container.Kernel);
+
+            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
         }
     }
 }

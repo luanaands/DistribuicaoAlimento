@@ -30,9 +30,9 @@ namespace DistribuaAlimento.Models
             modelBuilder.Configurations.Add(new InstituicaoMap());
             modelBuilder.Configurations.Add(new OrganizacoesFilantropicasMap());
 
+            modelBuilder.HasDefaultSchema("public");
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
-          //  modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
     }

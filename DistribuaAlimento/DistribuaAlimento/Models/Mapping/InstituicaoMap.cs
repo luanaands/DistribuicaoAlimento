@@ -15,13 +15,13 @@ namespace DistribuaAlimento.Models.Mapping
 
             // Properties
         
-
+            
             // Table & Column Mappings
-            this.ToTable("instituicao");
+           
             this.Property(t => t.id).HasColumnName("id");
             this.Property(t => t.razaosocial).HasColumnName("razaosocial");
             this.Property(t => t.cnpj).HasColumnName("cnpj");
-            this.Property(t => t.telefone).HasColumnName("contato");
+            this.Property(t => t.telefone).HasColumnName("telefone");
             this.Property(t => t.email).HasColumnName("email");
             this.Property(t => t.nomeRepresentante).HasColumnName("nomerepresentante");
         

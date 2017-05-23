@@ -23,6 +23,17 @@ namespace DistribuaAlimento
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/sb-admin-js").Include(
+                            "~/Scripts/sb-admin-2.js",
+                            "~/Scripts/metisMenu.js",
+                            "~/Scripts/toastr.js",
+                            "~/Scripts/moment.min.js",
+                            "~/Scripts/moment.pt-br.js",
+                            "~/Scripts/jquery.maskMoney.min.js",
+                            "~/Scripts/bootstrap-datepicker.js",
+                            "~/Scripts/custom.js"
+                ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

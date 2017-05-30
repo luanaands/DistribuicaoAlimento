@@ -281,11 +281,14 @@
     <Content Include="Views\Instituicao\Details.cshtml" />
     <Content Include="Views\Instituicao\Index.cshtml" />
     <Content Include="Views\Instituicao\Edit.cshtml" />
-    <Content Include="Views\InstituicoesFilantropicas\Create.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\OrganizacoesFilantropica\Create.cshtml" />
+    <Content Include="Views\OrganizacoesFilantropica\Index.cshtml" />
+    <Content Include="Views\OrganizacoesFilantropica\Details.cshtml" />
+    <Content Include="Views\OrganizacoesFilantropica\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Menu\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

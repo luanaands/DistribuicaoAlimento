@@ -1,0 +1,69 @@
+﻿@model DistribuaAlimento.Models.OrganizacoesFilantropicas
+
+@{
+    ViewBag.Title = "OrganizacoesFilantropicas";
+}
+<br />
+<br />
+<br />
+<div class="col-md-10 col-lg-offset-1">
+
+    <div class="panel panel-success" id="panel" name="panel">
+        <div class="panel-heading">
+            <div class="panel-title"></div>
+        </div>
+
+        <div class="panel-body" id="panelOrganizacoesFilantropicas" name="panelOrganizacoesFilantropicas">
+
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.nome)
+                @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.nomeRepresentante)
+                @Html.EditorFor(model => model.nomeRepresentante, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.nomeRepresentante, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.email)
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.contato)
+                @Html.EditorFor(model => model.contato, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.contato, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.cnpj)
+                @Html.EditorFor(model => model.cnpj, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.cnpj, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.quantidadePessoas)
+                @Html.EditorFor(model => model.quantidadePessoas, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.quantidadePessoas, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <input type="button" value="Editar" onclick="location.href='@Url.Action("Edit", "OrganizacoesFilantropica", new { id = Model.id })'" class="btn btn-primary btn-outline" />
+    <input type="button" value="Excluir" onclick="ConfirmaExclusao();" class="btn btn-danger btn-outline" />
+    <input type="button" value="Novo" onclick="location.href='@Url.Action("Create", "OrganizacoesFilantropica")'" class="btn btn-success btn-outline" />
+    <input type="button" value="Voltar" onclick="location.href='@Url.Action("Index", "OrganizacoesFilantropica")'" class="btn btn-outline btn-warning" />
+</div>
+@section Scripts {
+    <script>
+        function ConfirmaExclusao() {
+            var answer = confirm("Confirma a exclusão do registro?")
+            if (answer) {
+                window.location.href = '@Url.Action("Delete", "OrganizacoesFilantropica", new { id = Model.id })';
+            }
+        }
+
+    </script>
+}
+
+

@@ -35,7 +35,14 @@ namespace PGE.Alvara.Controllers
                 acao = "Index"
             });
 
-        
+            menu.listaMenu.Add(new Menu
+            {
+                id = 1,
+                titulo = "Organizacoes",
+                modulo = "OrganizacoesFilantropica",
+                acao = "Index"
+            });
+
 
             StringBuilder navBar = new StringBuilder();
             navBar.Clear();

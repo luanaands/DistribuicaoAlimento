@@ -15,6 +15,7 @@ namespace DistribuaAlimento.Models
         //foreign key 
         //one for one
         public int idInstituicao { get; set; }
+
         public int idArrecadado { get; set; }
         //
         public DateTime inicio { get;  set; }

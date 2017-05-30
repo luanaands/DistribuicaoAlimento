@@ -16,7 +16,7 @@ namespace DistribuaAlimento.Models
 
         public int quantidadePessoas { get; set; }
 
-        public string nome { get; set; }
+        public string nome { get; set; }      
 
         public string nomeRepresentante { get; set; }
 

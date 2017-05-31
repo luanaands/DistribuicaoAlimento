@@ -286,6 +286,7 @@
     <Content Include="Views\OrganizacoesFilantropica\Index.cshtml" />
     <Content Include="Views\OrganizacoesFilantropica\Details.cshtml" />
     <Content Include="Views\OrganizacoesFilantropica\Edit.cshtml" />
+    <Content Include="Views\Evento\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

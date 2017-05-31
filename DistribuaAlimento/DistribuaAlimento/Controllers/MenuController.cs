@@ -43,6 +43,15 @@ namespace PGE.Alvara.Controllers
                 acao = "Index"
             });
 
+            menu.listaMenu.Add(new Menu
+            {
+                id = 1,
+                titulo = "Evento",
+                modulo = "Evento",
+                acao = "Create"
+            });
+
+
 
             StringBuilder navBar = new StringBuilder();
             navBar.Clear();

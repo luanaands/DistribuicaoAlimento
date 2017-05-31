@@ -11,6 +11,8 @@ namespace DistribuaAlimento.Controllers
 {
     public class EventoController : Controller
     {
+        public IInstituicaoServico _IInstituicaoServico { get; set; }
+        public IArrecadadoServico _IArrecadadoServico { get; set; }
         public IEventoServico _IEventoServico { get; set; }
 
         // GET: Instituicao
@@ -33,9 +35,9 @@ namespace DistribuaAlimento.Controllers
 
         private void carregarCombo()
         {
+            ViewBag.inst = _IInstituicaoServico.ListarTudo();
+            
 
-
-            ;
         }
 
         [HttpPost]
@@ -45,6 +47,7 @@ namespace DistribuaAlimento.Controllers
             {
                 try
                 {
+                    organizacoes.idArrecadado = _IArrecadadoServico.ObterPrimeiro().id;
                     _IEventoServico.Adicionar(organizacoes);
                 }
                 catch (Exception ex)

@@ -1,0 +1,52 @@
+﻿@model DistribuaAlimento.Models.Alimento
+
+@{
+    ViewBag.Title = "Alimento";
+}
+<br />
+<br />
+<br />
+<div class="col-md-10 col-lg-offset-1">
+
+        <div class="panel panel-success" id="panel" name="panel">
+            <div class="panel-heading">
+                <div class="panel-title"></div>
+            </div>
+
+            <div class="panel-body" id="panelAlimento" name="panelAlimento">
+                <div class="form-group col-lg-4 text-left">
+                    @Html.LabelFor(model => model.nome)
+                    @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group col-lg-4 text-left">
+                    @Html.LabelFor(model => model.gramas)
+                    @Html.EditorFor(model => model.gramas, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.ValidationMessageFor(model => model.gramas, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group col-lg-4 text-left">
+                    @Html.LabelFor(model => model.validade)
+                    @Html.EditorFor(model => model.validade, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.ValidationMessageFor(model => model.validade, "", new { @class = "text-danger" })
+                </div>
+               
+            </div>
+        </div>
+    <input type="button" value="Editar" onclick="location.href='@Url.Action("Edit", "Alimento", new { id = Model.id })'" class="btn btn-primary btn-outline" />
+    <input type="button" value="Excluir" onclick="ConfirmaExclusao();" class="btn btn-danger btn-outline" />
+    <input type="button" value="Novo" onclick="location.href='@Url.Action("Create", "Alimento")'" class="btn btn-success btn-outline" />
+    <input type="button" value="Voltar" onclick="location.href='@Url.Action("Index", "Alimento")'" class="btn btn-outline btn-warning" />
+</div>
+@section Scripts {
+    <script>
+        function ConfirmaExclusao() {
+            var answer = confirm("Confirma a exclusão do registro?")
+            if (answer) {
+                window.location.href = '@Url.Action("Delete", "Alimento", new { id = Model.id })';
+            }
+        }
+
+    </script>
+}

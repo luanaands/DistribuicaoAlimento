@@ -20,8 +20,10 @@ namespace DistribuaAlimento.Models
 
         public int idArrecadado { get; set; }
         //
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime inicio { get;  set; }
 
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime fim { get; set; }
 
         public string nome { get; set; }

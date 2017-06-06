@@ -387,3 +387,7 @@ C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\Distribu
 C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\pt-br\System.Net.Http.Formatting.resources.dll
 C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\pt-br\System.Web.Http.resources.dll
 C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\PagedList.dll
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\PagedList.Mvc.dll
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\PagedList.xml
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\PagedList.Mvc.xml

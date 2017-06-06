@@ -1,0 +1,39 @@
+﻿@model DistribuaAlimento.Models.Alimento
+
+@{
+    ViewBag.Title = "Alimento";
+}
+<br />
+<br />
+<br />
+
+<h1>Alimento Doado </h1>
+<div class="col-md-10 col-lg-offset-1">
+
+    <div class="panel panel-success" id="panel" name="panel">
+        <div class="panel-heading">
+            <div class="panel-title"></div>
+        </div>
+
+        <div class="panel-body" id="panelAlimento" name="panelAlimento">
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.nome)
+                @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.gramas)
+                @Html.EditorFor(model => model.gramas, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.gramas, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-lg-4 text-left">
+                @Html.LabelFor(model => model.validade)
+                @Html.EditorFor(model => model.validade, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.validade, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+    </div>
+</div>

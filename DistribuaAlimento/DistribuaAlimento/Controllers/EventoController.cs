@@ -14,7 +14,7 @@ namespace DistribuaAlimento.Controllers
         public IInstituicaoServico _IInstituicaoServico { get; set; }
         public IArrecadadoServico _IArrecadadoServico { get; set; }
         public IEventoServico _IEventoServico { get; set; }
-
+        public IEstoqueServico _IEstoqueServico { get; set; }
         // GET: Instituicao
         public ActionResult Index()
         {
@@ -134,6 +134,8 @@ namespace DistribuaAlimento.Controllers
             {
                 //*** Exclui alvara
                 var organizacoes = _IEventoServico.ObterPorID(id);
+                var estoque = _IEstoqueServico.ObterPorID(id);
+                _IEstoqueServico.Deletar(estoque);
                 _IEventoServico.Deletar(organizacoes);
 
                 return RedirectToAction("Index", routeValues: new { id = id });

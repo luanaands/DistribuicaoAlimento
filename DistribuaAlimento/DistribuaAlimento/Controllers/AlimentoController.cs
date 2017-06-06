@@ -62,7 +62,7 @@ namespace DistribuaAlimento.Controllers
                 return View(alimento);
             }
 
-            return RedirectToAction("Details", new RouteValueDictionary(alimento));
+            return RedirectToAction("Index");
         }
 
 
@@ -132,6 +132,24 @@ namespace DistribuaAlimento.Controllers
                 _IAlimentoServico.Deletar(alimento);
 
                 return RedirectToAction("Index", routeValues: new { id = id });
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+        }
+
+        public ActionResult Doar(int id)
+        {
+
+            if (ModelState.IsValid)
+            {
+                //*** Exclui alvara
+
+
+                var alimento = _IAlimentoServico.ObterPorID(id);
+                return View(alimento);
+
             }
             else
             {

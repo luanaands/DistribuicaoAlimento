@@ -1,10 +1,10 @@
-﻿@model IEnumerable<DistribuaAlimento.Models.Alimento>
+﻿@model IEnumerable<DistribuaAlimento.Models.Evento>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<br/>
+<br />
 <br />
 <div class="col-lg-12">
     <p>
@@ -17,12 +17,17 @@
                     @Html.DisplayNameFor(model => model.nome)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.gramas)
+                    @Html.DisplayNameFor(model => model.instituicao.razaosocial)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.validade)
-                </th>               
-                <th></th>
+                    @Html.DisplayNameFor(model => model.inicio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.fim)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.publico)
+                </th>
                 <th></th>
             </tr>
         </thead>
@@ -35,17 +40,19 @@
                         @Html.DisplayFor(modelItem => item.nome)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.gramas)
+                        @Html.DisplayFor(modelItem => item.instituicao.razaosocial)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.validade)
+                        @Html.DisplayFor(modelItem => item.inicio)
                     </td>
-                  
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.publico)
+                    </td>
                     <td class="text-left">
                         @Html.ActionLink("Exibir", "Details", new { id = item.id }, new { @class = "btn btn-outline btn-success btn-xs" })
-                    </td>
-                    <td class="text-left">
-                        @Html.ActionLink("Doar", "Doar", new { id = item.id }, new { @class = "btn btn-outline btn-danger btn-xs" })
                     </td>
 
                 </tr>

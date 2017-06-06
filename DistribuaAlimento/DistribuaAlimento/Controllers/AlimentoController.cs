@@ -13,21 +13,30 @@ namespace DistribuaAlimento.Controllers
     {
 
         public IAlimentoServico _IAlimentoServico { get; set; }
-        public IEstoqueServico IEstoqueServico { get; set; }
-
+        public IEstoqueServico _IEstoqueServico { get; set; }
+        public IInstituicaoServico _IInstituicaoServico { get; set; }
+        public IEventoServico _IEventoServico { get; set; }
 
         public ActionResult Index()
         {
 
-            IEnumerable<Alimento> _alvaraIEnumerable = Enumerable.Empty<Alimento>();
-            _alvaraIEnumerable = _IAlimentoServico.ListarTudo();
-            return View(_alvaraIEnumerable);
+            IEnumerable<Alimento> _alimentoIEnumerable = Enumerable.Empty<Alimento>();
+            _alimentoIEnumerable = _IAlimentoServico.ListarTudo();
+            return View(_alimentoIEnumerable);
         }
 
         [HttpGet]
         public ActionResult Create()
         {
+            carregarCombo();
             return View();
+        }
+
+        private void carregarCombo()
+        {
+
+
+            ViewBag.estoque = _IEstoqueServico.ListarTudo();
         }
 
         [HttpPost]
@@ -37,12 +46,12 @@ namespace DistribuaAlimento.Controllers
             {
                 try
                 {
-                    
+                    carregarCombo();
                     _IAlimentoServico.Adicionar(alimento);
                 }
                 catch (Exception ex)
                 {
-
+                    carregarCombo();
                     ViewBag.msgErro = "Erro no cadastro. " + ex.Message.ToString();
                     return View(alimento);
                 }

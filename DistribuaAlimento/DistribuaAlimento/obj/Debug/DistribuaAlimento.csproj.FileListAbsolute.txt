@@ -378,3 +378,12 @@ C:\Users\bsi\Desktop\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bi
 C:\Users\bsi\Desktop\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\obj\Debug\DistribuaAlimento.csprojResolveAssemblyReference.cache
 C:\Users\bsi\Desktop\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\obj\Debug\DistribuaAlimento.dll
 C:\Users\bsi\Desktop\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\obj\Debug\DistribuaAlimento.pdb
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\System.Net.Http.Formatting.dll
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\System.Web.Http.dll
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\System.Web.Http.WebHost.dll
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\System.Net.Http.Formatting.xml
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\System.Web.Http.xml
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\System.Web.Http.WebHost.xml
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\User\Desktop\Nova pasta\DistribuicaoAlimento\DistribuaAlimento\DistribuaAlimento\bin\pt-br\System.Web.Http.WebHost.resources.dll

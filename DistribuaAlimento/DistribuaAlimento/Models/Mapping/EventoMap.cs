@@ -18,10 +18,8 @@ namespace DistribuaAlimento.Models.Mapping
             this.Property(t => t.id).HasColumnName("id");
             this.Property(t => t.nome).HasColumnName("nome");
             this.Property(t => t.publico).HasColumnName("publico");
-            
-
-            this.HasRequired(s => s.estoque)
-                .WithRequiredPrincipal(ad => ad.evento);
+            this.Property(t => t.idInstituicao).HasColumnName("idinstituicao");
+            this.Property(t => t.idArrecadado).HasColumnName("idarrecadado");
 
             this.HasRequired<Arrecadado>(s => s.arrecadado)
                    .WithMany(s => s.eventos)

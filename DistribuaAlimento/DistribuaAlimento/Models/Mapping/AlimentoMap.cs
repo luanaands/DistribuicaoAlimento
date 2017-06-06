@@ -24,11 +24,12 @@ namespace DistribuaAlimento.Models.Mapping
 
 
             // Table & Column Mappings
-            this.ToTable("Alimento");
+            this.ToTable("alimento");
             this.Property(t => t.id).HasColumnName("id");
             this.Property(t => t.nome).HasColumnName("nome");
             this.Property(t => t.validade).HasColumnName("validade");
             this.Property(t => t.tipo).HasColumnName("tipo");
+            this.Property(t => t.idEstoque).HasColumnName("idestoque");
 
             this.HasRequired<Estoque>(s => s.estoque)
                     .WithMany(s => s.alimentos)

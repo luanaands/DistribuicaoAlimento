@@ -47,22 +47,25 @@ namespace DistribuaAlimento.Controllers
             {
                 try
                 {
+
+                    carregarCombo();
                     organizacoes.idArrecadado = _IArrecadadoServico.ObterPrimeiro().id;
                     _IEventoServico.Adicionar(organizacoes);
+
                 }
                 catch (Exception ex)
                 {
-
+                    carregarCombo();
                     ViewBag.msgErro = "Erro no cadastro. " + ex.Message.ToString();
                     return View(organizacoes);
                 }
             }
             else
             {
-
+                carregarCombo();
                 return View(organizacoes);
             }
-
+            
             return RedirectToAction("Details", new RouteValueDictionary(organizacoes));
         }
         public ActionResult Details(int id)

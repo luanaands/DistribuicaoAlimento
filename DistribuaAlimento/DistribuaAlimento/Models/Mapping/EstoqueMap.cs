@@ -10,8 +10,7 @@ namespace DistribuaAlimento.Models.Mapping
     {
         public EstoqueMap()
         {
-            // Primary Key
-            this.HasKey(t => t.id);
+            
 
             // Table & Column Mappings
             this.ToTable("estoque");
